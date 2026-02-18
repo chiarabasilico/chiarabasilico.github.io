@@ -14,54 +14,51 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 80vh;
+            height: 85vh;
         }
 
         .content {
-            max-width: 800px;
+            max-width: 900px;
         }
 
         h1 {
-            font-size: 2.5rem; /* Nome più piccolo e discreto */
-            font-weight: 700;
-            letter-spacing: -0.02em;
+            font-size: 4rem; /* Dimensione decisa ma equilibrata */
+            font-weight: 800;
+            letter-spacing: -0.04em;
             margin: 0;
             text-transform: uppercase;
+            line-height: 0.9;
         }
 
         .subtitle {
-            font-size: 1rem;
-            font-weight: 400;
-            margin-top: 10px;
-            color: #666; /* Grigio scuro per staccare dal nero del nome */
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-top: 15px;
+            color: #000; /* Torniamo al nero totale */
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
         }
 
         .enter-link {
             display: inline-block;
-            margin-top: 80px;
-            font-size: 0.9rem;
-            font-weight: 500;
+            margin-top: 60px;
+            font-size: 1rem;
+            font-weight: 800;
             text-decoration: none;
             color: #000;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
-            transition: all 0.3s ease;
+            letter-spacing: 0.1em;
         }
 
-        /* Effetto raffinato: la linea appare solo quando passi sopra col mouse */
-        .enter-link::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 1px;
-            background: #000;
-            transition: width .3s;
+        /* Sottolineatura sottile fissa, molto pulita */
+        .enter-link {
+            border-bottom: 2px solid #000;
+            padding-bottom: 4px;
+            transition: opacity 0.3s;
         }
 
-        .enter-link:hover::after {
-            width: 100%;
+        .enter-link:hover {
+            opacity: 0.6;
         }
     </style>
 </head>
