@@ -9,48 +9,78 @@
             margin: 0;
             padding: 40px;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #fff;
-            color: #000;
+            background-color: #ffffff;
+            color: #000000;
+            -webkit-font-smoothing: antialiased;
         }
 
         nav {
             display: flex;
             gap: 30px;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
             font-weight: 700;
             text-transform: uppercase;
             font-size: 0.8rem;
             letter-spacing: 0.1em;
         }
-        nav a { text-decoration: none; color: #000; transition: opacity 0.3s; }
+        
+        nav a { 
+            text-decoration: none; 
+            color: #000; 
+            transition: opacity 0.3s;
+        }
+
         nav a:hover { opacity: 0.5; }
 
         .main-content {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 80px;
+            max-width: 1200px;
             align-items: start;
-            max-width: 1100px;
         }
 
         .bio-text {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.7;
+            text-align: justify;
         }
-        .bio-text b { font-weight: 700; }
-        
+
+        .bio-text p {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-text strong {
+            font-weight: 700;
+        }
+
+        .photo-area {
+            width: 100%;
+            background-color: #f5f5f5;
+        }
+
         .photo-area img {
             width: 100%;
             height: auto;
             filter: grayscale(100%);
             display: block;
-            background-color: #f0f0f0;
+            opacity: 0;
+            transition: opacity 1s ease;
         }
 
-        @media (max-width: 768px) {
-            .main-content { grid-template-columns: 1fr; gap: 30px; }
-            body { padding: 20px; }
+        /* Forza l'apparizione quando il file è caricato */
+        .photo-area img[src] {
+            opacity: 1;
+        }
+
+        @media (max-width: 900px) {
+            .main-content { 
+                grid-template-columns: 1fr; 
+                gap: 40px; 
+            }
+            body { padding: 25px; }
+            nav { margin-bottom: 40px; }
         }
     </style>
 </head>
@@ -64,11 +94,19 @@
 
     <main class="main-content">
         <div class="bio-text">
-            <p><b>Chiara Basilico</b> si occupa di <b>visual design</b> e ricerca applicata ai contesti territoriali.</p>
-            <p>Il suo lavoro esplora il legame tra i <b>patrimoni alpini</b> e le pratiche dell’arte contemporanea, con un particolare focus sull’educazione e la narrazione visiva dei luoghi.</p>
+            <p>
+                <strong>Chiara Basilico</strong> si occupa di visual design e ricerca applicata, specializzandosi nella rigenerazione culturale dei contesti territoriali e alpini. Il suo percorso formativo e professionale esplora le intersezioni tra design, pratiche artistiche contemporanee e pedagogia, intese come strumenti fondamentali per riattivare la relazione profonda tra le comunità e i loro luoghi.
+            </p>
+            <p>
+                Lontana da una visione nostalgica o stereotipata della montagna, lavora sul concetto di <strong>paesaggio culturale (Kulturlandschaft)</strong> non come natura selvaggia, ma come spazio dinamico di sperimentazione e stratificazione antropica. Attraverso la progettazione di dispositivi educativi e installazioni partecipative, indaga le potenzialità del gioco e dell'esperienza estetica come chiavi di lettura per decodificare la complessità del patrimonio materiale e immateriale.
+            </p>
+            <p>
+                La sua ricerca mira a una "risignificazione metasemica" dei territori, promuovendo una salvaguardia attiva che trasformi la fruizione passiva in esperienza cognitiva. L'obiettivo è costruire nuovi immaginari per le aree interne, ponendo l'<strong>educazione allo sguardo</strong> al centro di un processo di cura e di riabitabilità consapevole.
+            </p>
         </div>
+
         <div class="photo-area">
-            <img src="pic_cbas.jpg.jpg" alt="Chiara Basilico">
+            <img src="pic_cbas.jpg" alt="Chiara Basilico" onerror="this.style.display='none'">
         </div>
     </main>
 
