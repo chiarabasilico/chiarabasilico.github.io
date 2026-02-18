@@ -18,28 +18,30 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        h1 { 
-            font-size: clamp(3.5rem, 10vw, 6rem);
+        /* TITOLO: Rimpicciolito a 6.5rem */
+        h1 {
+            font-size: clamp(3rem, 10vw, 6.5rem); 
             font-weight: 900;
             margin: 0;
             letter-spacing: -0.05em;
             text-transform: uppercase;
             line-height: 0.85;
-        } 
-        
         }
+
+        /* SOTTOTITOLO + LINEA A TUTTO SCHERMO */
         .subtitle {
             font-size: 1.5rem;
             font-weight: 700;
             text-transform: uppercase;
             margin-top: 20px;
-            /* Riga nera spessa */
+            /* La linea da 15px è qui sotto */
             border-top: 15px solid #000; 
             padding-top: 15px;
-            /* Queste due righe la rendono a tutto schermo */
+            /* Forza la linea a occupare tutta la larghezza */
             display: block; 
             width: 100%; 
         }
+
         .lang-selector {
             margin-top: 60px;
             font-size: 0.9rem;
@@ -47,11 +49,13 @@
             text-transform: uppercase;
             letter-spacing: 0.2em;
         }
+
         .lang-selector a {
             text-decoration: none;
             color: #000;
             transition: opacity 0.3s;
         }
+
         .lang-selector a:hover { opacity: 0.5; }
         .divider { margin: 0 10px; color: #000; }
         
@@ -62,7 +66,9 @@
     </style>
 </head>
 <body>
+
     <h1>CHIARA<br>BASILICO</h1>
+    
     <div class="subtitle">Design, Heritage, Education</div>
     
     <div class="lang-selector">
@@ -70,5 +76,6 @@
         <span class="divider">|</span>
         <a href="home_en.html">EN</a>
     </div>
+
 </body>
 </html>
