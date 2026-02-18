@@ -12,8 +12,6 @@
             background-color: #fff;
             color: #000;
         }
-
-        /* Menu di navigazione */
         nav {
             display: flex;
             gap: 30px;
@@ -23,69 +21,50 @@
             font-size: 0.8rem;
             letter-spacing: 0.1em;
         }
-        nav a { 
-            text-decoration: none; 
-            color: #000; 
-            transition: opacity 0.3s;
-        }
+        nav a { text-decoration: none; color: #000; transition: opacity 0.3s; }
         nav a:hover { opacity: 0.5; }
 
-        /* Layout asimmetrico: Testo a sinistra, Foto a destra */
         .main-content {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr; /* Il testo occupa un po' più di spazio */
+            grid-template-columns: 1.2fr 0.8fr;
             gap: 60px;
             align-items: start;
             max-width: 1100px;
         }
-
         .bio-text {
-            font-size: 1.1rem; /* Font leggermente più piccolo ed elegante */
+            font-size: 1.1rem;
             line-height: 1.6;
             font-weight: 400;
         }
-
-        .bio-text b { 
-            font-weight: 700; 
-        }
-
+        .bio-text b { font-weight: 700; }
+        
         .photo-area img {
             width: 100%;
             height: auto;
-            filter: grayscale(100%); /* Trasforma la foto in bianco e nero */
+            filter: grayscale(100%);
             display: block;
         }
-
-        /* Adattamento per cellulari: mette la foto sotto al testo */
         @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
+            .main-content { grid-template-columns: 1fr; gap: 30px; }
             body { padding: 20px; }
-            nav { margin-bottom: 40px; }
         }
     </style>
 </head>
 <body>
-
     <nav>
         <a href="index.html">← Intro</a>
         <a href="home.html">Home</a>
-        <a href="projects.html" style="opacity: 0.4;">Progetti</a>
+        <a href="projects.html" style="opacity: 0.3;">Progetti</a>
         <a href="contacts.html">Contatti</a>
     </nav>
-
     <main class="main-content">
         <div class="bio-text">
             <p><b>Chiara Basilico</b> si occupa di <b>visual design</b> e ricerca applicata ai contesti territoriali.</p>
             <p>Il suo lavoro esplora il legame tra i <b>patrimoni alpini</b> e le pratiche dell’arte contemporanea, con un particolare focus sull’educazione e la narrazione visiva dei luoghi.</p>
         </div>
-
         <div class="photo-area">
             <img src="profilo.jpg" alt="Chiara Basilico">
         </div>
     </main>
-
 </body>
 </html>
