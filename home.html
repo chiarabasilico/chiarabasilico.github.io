@@ -56,4 +56,36 @@
             display: block;
         }
 
-        /*
+        /* Adattamento per cellulari: mette la foto sotto al testo */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            body { padding: 20px; }
+            nav { margin-bottom: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">← Intro</a>
+        <a href="home.html">Home</a>
+        <a href="projects.html" style="opacity: 0.4;">Progetti</a>
+        <a href="contacts.html">Contatti</a>
+    </nav>
+
+    <main class="main-content">
+        <div class="bio-text">
+            <p><b>Chiara Basilico</b> si occupa di <b>visual design</b> e ricerca applicata ai contesti territoriali.</p>
+            <p>Il suo lavoro esplora il legame tra i <b>patrimoni alpini</b> e le pratiche dell’arte contemporanea, con un particolare focus sull’educazione e la narrazione visiva dei luoghi.</p>
+        </div>
+
+        <div class="photo-area">
+            <img src="profilo.jpg" alt="Chiara Basilico">
+        </div>
+    </main>
+
+</body>
+</html>
