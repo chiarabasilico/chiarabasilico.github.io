@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chiara Basilico</title>
+    <title>Chiara Basilico | Home</title>
     <style>
         body {
             margin: 0;
@@ -11,56 +11,49 @@
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             background-color: #fff;
             color: #000;
-            height: 90vh;
+        }
+
+        /* Menu di navigazione */
+        nav {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        h1 {
-            font-size: clamp(3.5rem, 12vw, 9rem);
-            font-weight: 900;
-            margin: 0;
-            letter-spacing: -0.05em;
-            text-transform: uppercase;
-            line-height: 0.85;
-        }
-
-        .subtitle {
-            font-size: 1.5rem;
+            gap: 30px;
+            margin-bottom: 80px;
             font-weight: 700;
             text-transform: uppercase;
-            margin-top: 20px;
-            /* Questa è la riga thick che ti piaceva */
-            border-top: 15px solid #000; 
-            padding-top: 15px;
-            display: inline-block;
-            width: fit-content;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
         }
-
-        .enter-link {
-            margin-top: 60px;
-            font-size: 0.9rem; /* Più piccola */
-            font-weight: 400; /* Non bold */
-            text-decoration: none; /* Non sottolineata */
-            color: #000;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
+        nav a { 
+            text-decoration: none; 
+            color: #000; 
             transition: opacity 0.3s;
         }
+        nav a:hover { opacity: 0.5; }
 
-        .enter-link:hover {
-            opacity: 0.5;
+        /* Layout asimmetrico: Testo a sinistra, Foto a destra */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr; /* Il testo occupa un po' più di spazio */
+            gap: 60px;
+            align-items: start;
+            max-width: 1100px;
         }
-    </style>
-</head>
-<body>
 
-    <h1>CHIARA<br>BASILICO</h1>
-    
-    <div class="subtitle">Design, Heritage, Education</div>
-    
-    <a href="home.html" class="enter-link">Entra</a>
+        .bio-text {
+            font-size: 1.1rem; /* Font leggermente più piccolo ed elegante */
+            line-height: 1.6;
+            font-weight: 400;
+        }
 
-</body>
-</html>
+        .bio-text b { 
+            font-weight: 700; 
+        }
+
+        .photo-area img {
+            width: 100%;
+            height: auto;
+            filter: grayscale(100%); /* Trasforma la foto in bianco e nero */
+            display: block;
+        }
+
+        /*
