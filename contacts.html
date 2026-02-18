@@ -9,8 +9,9 @@
             margin: 0;
             padding: 40px;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #fff;
-            color: #000;
+            background-color: #ffffff;
+            color: #000000;
+            -webkit-font-smoothing: antialiased;
         }
 
         nav {
@@ -22,11 +23,12 @@
             font-size: 0.8rem;
             letter-spacing: 0.1em;
         }
+        
         nav a { text-decoration: none; color: #000; transition: opacity 0.3s; }
         nav a:hover { opacity: 0.5; }
 
         .header-section { margin-bottom: 60px; }
-        h2 { font-size: 4rem; font-weight: 900; text-transform: uppercase; margin: 0; line-height: 0.9; }
+        h2 { font-size: 4rem; font-weight: 900; text-transform: uppercase; margin: 0; line-height: 0.9; letter-spacing: -0.05em; }
         .thick-line { width: 100%; height: 15px; background-color: #000; margin-top: 10px; }
 
         .container {
@@ -39,16 +41,37 @@
         form { display: flex; flex-direction: column; gap: 25px; }
         .field-group { display: flex; flex-direction: column; }
         label { font-size: 0.8rem; font-weight: 900; text-transform: uppercase; margin-bottom: 8px; }
-        input, textarea { border: none; border-bottom: 3px solid #000; padding: 10px 0; font-family: inherit; font-size: 1.1rem; outline: none; background: transparent; }
-        button { background: #000; color: #fff; border: none; padding: 15px 50px; font-weight: 900; text-transform: uppercase; cursor: pointer; transition: 0.3s; width: fit-content; }
+        input, textarea { border: none; border-bottom: 3px solid #000; padding: 10px 0; font-family: inherit; font-size: 1.1rem; outline: none; background: transparent; border-radius: 0; }
+        
+        button { 
+            background: #000; 
+            color: #fff; 
+            border: none; 
+            padding: 15px 50px; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            cursor: pointer; 
+            transition: 0.3s; 
+            width: fit-content; 
+        }
         button:hover { background-color: #333; }
 
         .info-section { font-size: 1.1rem; line-height: 1.8; }
-        .info-label { display: block; text-transform: uppercase; font-size: 0.8rem; font-weight: 900; margin-top: 20px; margin-bottom: 5px; }
-        .info-section a { color: #000; text-decoration: none; border-bottom: 1px solid #000; }
+        .info-label { display: block; text-transform: uppercase; font-size: 0.8rem; font-weight: 900; margin-top: 25px; margin-bottom: 5px; }
+        
+        .info-section a { 
+            color: #000; 
+            text-decoration: none; 
+            border-bottom: 1px solid #000; 
+            transition: opacity 0.3s;
+        }
         .info-section a:hover { opacity: 0.5; }
 
-        @media (max-width: 768px) { .container { grid-template-columns: 1fr; gap: 40px; } h2 { font-size: 2.5rem; } body { padding: 20px; } }
+        @media (max-width: 768px) { 
+            .container { grid-template-columns: 1fr; gap: 40px; } 
+            h2 { font-size: 2.5rem; } 
+            body { padding: 20px; } 
+        }
     </style>
 </head>
 <body>
@@ -82,7 +105,10 @@
         </form>
 
         <div class="info-section">
-            <span class="info-label">Base</span>
+            <span class="info-label">Email me</span>
+            <a href="mailto:hi@chiarabasilico.studio">hi@chiarabasilico.studio</a>
+
+            <span class="info-label">Based in</span>
             Milano / St. Gallen
 
             <span class="info-label">Instagram</span>
