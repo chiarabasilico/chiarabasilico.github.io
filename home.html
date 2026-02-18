@@ -12,6 +12,7 @@
             background-color: #fff;
             color: #000;
         }
+
         nav {
             display: flex;
             gap: 30px;
@@ -31,6 +32,7 @@
             align-items: start;
             max-width: 1100px;
         }
+
         .bio-text {
             font-size: 1.1rem;
             line-height: 1.6;
@@ -43,7 +45,9 @@
             height: auto;
             filter: grayscale(100%);
             display: block;
+            background-color: #f0f0f0;
         }
+
         @media (max-width: 768px) {
             .main-content { grid-template-columns: 1fr; gap: 30px; }
             body { padding: 20px; }
@@ -51,11 +55,13 @@
     </style>
 </head>
 <body>
+
     <nav>
         <a href="index.html">← Intro</a>
         <a href="home.html">Home</a>
-        <a href="contacts.html">Contacts</a>
+        <a href="contacts.html">Contatti</a>
     </nav>
+
     <main class="main-content">
         <div class="bio-text">
             <p><b>Chiara Basilico</b> si occupa di <b>visual design</b> e ricerca applicata ai contesti territoriali.</p>
@@ -65,5 +71,6 @@
             <img src="profilo.jpg" alt="Chiara Basilico">
         </div>
     </main>
+
 </body>
 </html>
