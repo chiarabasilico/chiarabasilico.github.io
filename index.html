@@ -7,52 +7,72 @@
     <style>
         body {
             margin: 0;
-            padding: 40px;
+            padding: 60px;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             background-color: #fff;
-            height: 90vh;
+            color: #000;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            height: 80vh;
         }
+
+        .content {
+            max-width: 800px;
+        }
+
         h1 {
-            font-size: clamp(3.5rem, 12vw, 9rem);
-            font-weight: 900;
-            margin: 0;
-            letter-spacing: -0.05em;
-            text-transform: uppercase;
-            line-height: 0.85;
-        }
-        .subtitle {
-            font-size: 1.5rem;
+            font-size: 2.5rem; /* Nome più piccolo e discreto */
             font-weight: 700;
+            letter-spacing: -0.02em;
+            margin: 0;
             text-transform: uppercase;
-            margin-top: 20px;
-            border-top: 10px solid #000;
-            padding-top: 15px;
-            display: inline-block;
         }
+
+        .subtitle {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 10px;
+            color: #666; /* Grigio scuro per staccare dal nero del nome */
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
         .enter-link {
-            margin-top: 50px;
-            font-size: 1.2rem;
-            font-weight: 900;
+            display: inline-block;
+            margin-top: 80px;
+            font-size: 0.9rem;
+            font-weight: 500;
             text-decoration: none;
             color: #000;
             text-transform: uppercase;
-            border: 3px solid #000;
-            padding: 10px 30px;
-            width: fit-content;
-            transition: 0.3s;
+            letter-spacing: 0.2em;
+            transition: all 0.3s ease;
         }
-        .enter-link:hover {
+
+        /* Effetto raffinato: la linea appare solo quando passi sopra col mouse */
+        .enter-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
             background: #000;
-            color: #fff;
+            transition: width .3s;
+        }
+
+        .enter-link:hover::after {
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <h1>CHIARA<br>BASILICO</h1>
-    <div class="subtitle">Design, Heritage, Education</div>
-    <a href="home.html" class="enter-link">Entra</a>
+
+    <div class="content">
+        <h1>Chiara Basilico</h1>
+        <div class="subtitle">Design • Heritage • Education</div>
+        
+        <a href="home.html" class="enter-link">Entra</a>
+    </div>
+
 </body>
 </html>
