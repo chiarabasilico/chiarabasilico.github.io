@@ -1,20 +1,22 @@
+<!DOCTYPE html>
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chiara Basilico | Visual Design & Research</title>
+    <title>Chiara Basilico | Visual Designer & Research</title>
 
     <meta name="google-site-verification" content="v5AidhRPMhaHAqlpwF0-wbdPOnKuddtoF_Ctm04CEsQ" />
     <meta name="description" content="Chiara Basilico. Visual design and arts-based research for cultural and territorial regeneration.">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chiarabasilico.studio/">
-    <meta property="og:title" content="Chiara Basilico | Visual Design & Research">
+    <meta property="og:title" content="Chiara Basilico | Visual Designer & Research">
     <meta property="og:description" content="Visual design and arts-based research for cultural and territorial regeneration.">
     <meta property="og:image" content="https://chiarabasilico.studio/pic_cbas2.jpg">
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Chiara Basilico | Visual Design & Research">
+    <meta property="twitter:title" content="Chiara Basilico | Visual Designer & Research">
     <meta property="twitter:description" content="Visual design and arts-based research for cultural and territorial regeneration.">
     <meta property="twitter:image" content="https://chiarabasilico.studio/pic_cbas2.jpg">
 
@@ -35,6 +37,7 @@
       "mainEntityOfPage": "https://chiarabasilico.studio/"
     }
     </script>
+
     <style>
         body {
             margin: 0;
@@ -49,6 +52,13 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* --- STILE PER I LINK SUL TESTO --- */
+        .main-link {
+            text-decoration: none;
+            color: inherit; /* Mantiene il nero originale */
+            cursor: pointer;
+        }
+
         h1 {
             font-size: clamp(3rem, 10vw, 6.5rem); 
             font-weight: 900;
@@ -56,6 +66,7 @@
             letter-spacing: -0.05em;
             text-transform: uppercase;
             line-height: 0.85;
+            display: inline-block; /* Necessario per il link */
         }
 
         .subtitle {
@@ -63,10 +74,10 @@
             font-weight: 700;
             text-transform: uppercase;
             margin-top: 20px;
-            border-top: 15px solid #000; 
+            border-top: 15px solid #000; /* La riga nera rimane qui */
             padding-top: 15px;
             display: block; 
-            width: 100%; 
+            width: 100%; /* Garantisce che la riga sia lunga tutta la pagina */
         }
 
         .lang-selector {
@@ -90,12 +101,17 @@
             body { padding: 20px; }
             .subtitle { font-size: 1.1rem; }
         }
-    </style> </head>
+    </style> 
+</head>
 <body>
 
-    <h1>CHIARA<br>BASILICO</h1>
+    <a href="home_en.html" class="main-link">
+        <h1>CHIARA<br>BASILICO</h1>
+    </a>
     
-    <div class="subtitle">Design, Heritage, Education</div>
+    <div class="subtitle">
+        <a href="home_en.html" class="main-link">Design, Heritage, Education</a>
+    </div>
     
     <div class="lang-selector">
         <a href="home.html">IT</a>
